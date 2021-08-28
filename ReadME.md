@@ -16,6 +16,8 @@
   - 物を持つ
   - 触ると動く、当たり判定的な  
   - AをBに接触させるとCが起こる  
+- PlayMakerの習得
+  - カメラの位置の取得、それに応じた処理
 - 必要なShaderが問題なく動くか確認  
 
 ---
@@ -39,3 +41,10 @@ HMDを被る(頭に接触させる)と別の空間にワープする。
 - 会議室の3Dモデル
 - ワープ演出、エフェクト
 - 会議の音、人の声、ワープ音などサウンド
+
+---
+
+## 参考リンク
+- [UnityからSTYLYにプレハブとシーンをアップロードする方法](https://styly.cc/ja/manual/unity-asset-uploader/)  
+- [STYLY インタラクションSDK マニュアル](https://styly.cc/ja/manual/interaction_sdk_manual/)  
+- [【Unity】ゼロからわかるPlayMaker「超」入門 基礎知識](https://styly.cc/ja/tips/playmaker_coreconcepts/)
