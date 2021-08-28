@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 476840054
+CRC: 321374442
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 8899c3e036fb75245440d72f6110351c
+    Hash: fa693b9c592da61a9ff7bd90f0e9c52e
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 162d151e7534a7beafeacae96290ebdd
+    Hash: 804a381f390426d62fea711acd18bcd8
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -17,9 +17,17 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 21
   Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
 - Class: 28
   Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
 - Class: 48
+  Script: {instanceID: 0}
+- Class: 65
   Script: {instanceID: 0}
 - Class: 81
   Script: {instanceID: 0}
@@ -27,10 +35,16 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 108
   Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7010a8a8fbaf7a44499a4033b55a1a50, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 135
+  Script: {instanceID: 0}
 - Class: 157
   Script: {instanceID: 0}
 - Class: 196
   Script: {instanceID: 0}
 Assets:
-- Assets/_MyFolder/Scenes/1f20ab49-c76a-4f93-970c-e4bc5aeabe8e.unity
+- Assets/_MyFolder/Scenes/f0cebd68-3e17-4638-ad16-5798129d575c.unity
 Dependencies: []
