@@ -42,6 +42,11 @@ HMDを被る(頭に接触させる)と別の空間にワープする。
 - ワープ演出、エフェクト
 - 会議の音、人の声、ワープ音などサウンド
 
+■候補  
+[Simple Office](https://assetstore.unity.com/packages/3d/props/interior/simple-office-28730?locale=ja-JP)  
+[Home Furniture Pack](https://assetstore.unity.com/packages/3d/props/furniture/home-furniture-pack-137357)  
+[HQ ArchViz Conference Room](https://assetstore.unity.com/packages/3d/environments/hq-archviz-conference-room-127663)  
+
 ---
 
 ## 参考リンク
@@ -49,3 +54,8 @@ HMDを被る(頭に接触させる)と別の空間にワープする。
 - [STYLY インタラクションSDK マニュアル](https://styly.cc/ja/manual/interaction_sdk_manual/)  
 - [【Unity入門】PlayMakerを使った初めてのゲーム作り 概要とインストール](https://styly.cc/ja/tips/unity-playmaker-game-beginner-1/)
 - [【Unity】ゼロからわかるPlayMaker「超」入門 基礎知識](https://styly.cc/ja/tips/playmaker_coreconcepts/)
+
+
+---
+
+## 詰まったところ、欲しい機能など
