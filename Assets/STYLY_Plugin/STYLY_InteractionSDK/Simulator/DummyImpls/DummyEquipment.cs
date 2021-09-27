@@ -104,7 +104,6 @@ namespace STYLY.Interaction.SDK.Dummy
             transform.position = moveTo;
             transform.rotation = mainCamera.transform.rotation;
             transform.eulerAngles += new Vector3(-40,0,0 );
-            
         }
         
         
