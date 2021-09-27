@@ -103,6 +103,6 @@ private void MovePosition()
 ---
 
 ### Playerの原点
-**Q.Zが-5なのは何故？**
+**Q.Zが-5なのは何故？**  
 Editor上でMainCameraの位置を-5にしておくとゲームビュー及びシーンビューが実機転送時・PlayMode時と同様の位置関係になった。  
 ![StylyDoc3](ReadMEImage/StylyDoc3.PNG)
