@@ -95,3 +95,7 @@ private void MovePosition()
 親に一つ空のオブジェクトを用意。親にIsTriggerにチェックを入れたColliderを用意し、掴むようにした。Blenderで回転いじっても良いが、面倒だったのでこれで対応。  
 
 ![StylyDoc1](ReadMEImage\StylyDoc1.gif)
+
+親の原点から子の3Dモデルの原点を少しずらして、右端を持つようにした。  
+左利きは諦めた。**Q.右手でしか使えないようにできる？**  
+![StylyDoc2](ReadMEImage\StylyDoc2.gif)
