@@ -59,3 +59,39 @@ HMDを被る(頭に接触させる)と別の空間にワープする。
 ---
 
 ## 詰まったところ、欲しい機能など
+
+
+### Editor上からVRでの見え方を確認したい  
+
+下記で解決。  
+[STYLYローカルプレビューツール 「UnityシーンをSTYLY StudioにアップロードせずにSTYLY VR アプリで動作確認する方法」](https://styly.cc/ja/manual/styly-local-preview-tool/)  
+
+---
+
+### STYLY_Attr_Equipmentで良い感じに物を持ちたい
+
+実機上でPreviewするとコントローラーと同じ角度に追従した。  
+Editor上のシミュレートは40度回転していた。  
+
+```cs
+private void MovePosition() 
+{
+  Vector3 mousePos = Input.mousePosition;
+  mousePos.z = distanceFromCamera;
+
+  moveTo = mainCamera.ScreenToWorldPoint(mousePos);
+  transform.position = moveTo;
+  transform.rotation = mainCamera.transform.rotation;
+  transform.eulerAngles += new Vector3(-40,0,0 );
+}
+```
+
+なので、親オブジェクトの配下に物を置いて持った時に気持ちよくなる角度を探した。  
+
+■課題  
+"持ったときに気持ちよくなる角度"と"最初に置いてて不自然じゃない角度"が違う　という点だけ直したい。  
+
+■解決策  
+親に一つ空のオブジェクトを用意。親にIsTriggerにチェックを入れたColliderを用意し、掴むようにした。Blenderで回転いじっても良いが、面倒だったのでこれで対応。  
+
+![StylyDoc1](ReadMEImage\StylyDoc1.gif)
