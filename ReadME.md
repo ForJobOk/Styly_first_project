@@ -58,7 +58,7 @@ HMDを被る(頭に接触させる)と別の空間にワープする。
 
 ---
 
-## 詰まったところ、欲しい機能など
+## 詰まったところ、疑問点など
 
 
 ### Editor上からVRでの見え方を確認したい  
@@ -99,3 +99,10 @@ private void MovePosition()
 親の原点から子の3Dモデルの原点を少しずらして、右端を持つようにした。  
 左利きは諦めた。**Q.右手でしか使えないようにできる？**  
 ![StylyDoc2](ReadMEImage\StylyDoc2.gif)
+
+---
+
+### Playerの原点
+**Q.Zが-5なのは何故？**
+Editor上でMainCameraの位置を-5にしておくとゲームビュー及びシーンビューが実機転送時・PlayMode時と同様の位置関係になった。  
+![StylyDoc3](ReadMEImage\StylyDoc3.PNG)
