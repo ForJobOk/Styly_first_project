@@ -94,15 +94,23 @@ private void MovePosition()
 ■解決策  
 親に一つ空のオブジェクトを用意。親にIsTriggerにチェックを入れたColliderを用意し、掴むようにした。Blenderで回転いじっても良いが、面倒だったのでこれで対応。  
 
-![StylyDoc1](ReadMEImage/StylyDoc1.gif)
+![StylyDoc1](ReadMEImage\StylyDoc1.gif)
 
 親の原点から子の3Dモデルの原点を少しずらして、右端を持つようにした。  
-左利きは諦めた。**Q.右手でしか使えないようにできる？**  
-![StylyDoc2](ReadMEImage/StylyDoc2.gif)
+左利き対応はたぶんできないだろうと諦めた。
+![StylyDoc2](ReadMEImage\StylyDoc2.gif)
 
 ---
 
 ### Playerの原点
-**Q.Zが-5なのは何故？**  
+**Q.Playerの原点のZ座標が-5なのは何故か？**
 Editor上でMainCameraの位置を-5にしておくとゲームビュー及びシーンビューが実機転送時・PlayMode時と同様の位置関係になった。  
-![StylyDoc3](ReadMEImage/StylyDoc3.PNG)
+![StylyDoc3](ReadMEImage\StylyDoc3.PNG)
+
+---
+
+### 影の品質
+影の品質がプラットフォームごとにデフォルトで異なっていたので  
+WebGLのPlayerと実機での品質の違いにアップロード＆実機でプレビューして気付いた。  
+Unity常用者なら詰まることはなさそう。  
+![StylyDoc4](ReadMEImage\StylyDoc4.PNG)
