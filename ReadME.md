@@ -116,8 +116,23 @@ Editor上でMainCameraの位置を-5にしておくとゲームビュー及び�
 WebGLのPlayerと実機での品質の違いにアップロード＆実機でプレビューして気付いた。  
 ![StylyDoc4](ReadMEImage\StylyDoc4.PNG)
 
-Editor上で行ったWebGLの設定がWebPlayer上では反映されていなかった。
+Editor上で行ったWebGLの設定がWebPlayer上では反映されていなかった。  
 **Q.WebのPlayerに影の設定を反映させるには？**
 
-下記のように描画距離を絞って影の品質を上げたい。
+下記のように描画距離を絞って影の品質を上げたい。  
 【参考リンク】：[2-2 City](https://gallery.styly.cc/scene/074fbc78-39ad-4814-94d1-d681df8d565b)
+
+---
+
+### カメラにUIを追従させたい
+目的はフェードインアウトをUIで実装すること。その手段としてUIをカメラの目の前に追従させたかった。  
+
+HierarchyでMainCameraの配下にWorldCanvasを置けば良いと思ったが、  
+STYLY_Player(Clone)が動的に生成され、配下にカメラがついて回る仕組みだったのでPlayMakerで実装した。
+
+下記のような記事があったが、そこまで厳密でUIUXに準拠した追従を求めていなかったのでカメラをシーン内から探してその子にUIを配置する仕組みにした。
+
+【参考リンク】：[[Unity/Playmaker]ユーザーに追従するUIの実装方法](https://styly.cc/ja/tips/playmaker_following_ui/)
+
+![StylyDoc5](ReadMEImage\StylyDoc5.PNG)  
+
