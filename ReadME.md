@@ -119,3 +119,5 @@ WebGLのPlayerと実機での品質の違いにアップロード＆実機でプ
 Editor上で行ったWebGLの設定がWebPlayer上では反映されていなかった。
 **Q.WebのPlayerに影の設定を反映させるには？**
 
+下記のように描画距離を絞って影の品質を上げたい。
+【参考リンク】：[2-2 City](https://gallery.styly.cc/scene/074fbc78-39ad-4814-94d1-d681df8d565b)
