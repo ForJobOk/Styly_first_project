@@ -96,6 +96,8 @@ private void MovePosition()
 
 ![StylyDoc1](ReadMEImage\StylyDoc1.gif)
 
+Colliderが2つあるから？なのか稀に右クリックでのオブジェクトのリリースが反応しないことがあった。  
+
 親の原点から子の3Dモデルの原点を少しずらして、右端を持つようにした。  
 左利き対応はたぶんできないだろうと諦めた。
 ![StylyDoc2](ReadMEImage\StylyDoc2.gif)
@@ -112,5 +114,8 @@ Editor上でMainCameraの位置を-5にしておくとゲームビュー及び�
 ### 影の品質
 影の品質がプラットフォームごとにデフォルトで異なっていたので  
 WebGLのPlayerと実機での品質の違いにアップロード＆実機でプレビューして気付いた。  
-Unity常用者なら詰まることはなさそう。  
 ![StylyDoc4](ReadMEImage\StylyDoc4.PNG)
+
+Editor上で行ったWebGLの設定がWebPlayer上では反映されていなかった。
+**Q.WebのPlayerに影の設定を反映させるには？**
+
