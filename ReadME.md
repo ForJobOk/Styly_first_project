@@ -48,6 +48,11 @@ HMDを被る(頭に接触させる)と別の空間にワープする。
 [Simple Office](https://assetstore.unity.com/packages/3d/props/interior/simple-office-28730?locale=ja-JP)  
 [Home Furniture Pack](https://assetstore.unity.com/packages/3d/props/furniture/home-furniture-pack-137357)  
 [HQ ArchViz Conference Room](https://assetstore.unity.com/packages/3d/environments/hq-archviz-conference-room-127663)  
+[Modern Interier Room Pack Vol.1](https://assetstore.unity.com/packages/3d/environments/modern-interier-room-pack-vol-1-77021)  
+[Notebook PC（PBS）](https://assetstore.unity.com/packages/3d/props/electronics/notebook-pc-pbs-133020)  
+[YGS TV](https://assetstore.unity.com/packages/3d/props/electronics/ygs-tv-96583)  
+[Modern Desk](https://assetstore.unity.com/packages/3d/props/interior/modern-desk-155462#description)  
+
 
 ---
 
