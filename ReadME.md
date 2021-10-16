@@ -105,6 +105,7 @@ Colliderが2つあるから？なのか稀に右クリックでのオブジェ�
 左利き対応はたぶんできないだろうと諦めた。
 ![StylyDoc2](ReadMEImage/StylyDoc2.gif)
 
+
 ---
 
 ### Playerの原点
@@ -155,6 +156,11 @@ Playerのカメラをタグで検索するようにした。~~
 
 Camera Fade InというActionが用意されていた。Outもある。
 
+下記ドキュメントにも記載があったが、フェード時のブラックアウトをディレイしてその間に何かやりたいときは`Draw Fullscreen Color`で待ってあげる必要があった。  
+
+![StylyDoc8](ReadMEImage/StylyDoc8.PNG)  
+
+【参考リンク】：[Camera Fade Out](https://hutonggames.fogbugz.com/default.asp?W186)
 
 ---
 ### Player(Camera)との当たり判定
@@ -165,3 +171,7 @@ Camera Fade InというActionが用意されていた。Outもある。
 ・Collider付きオブジェクトをカメラに追従させる  
 
 Colliderは事故が多そうなので距離にした。  
+
+![StylyDoc9](ReadMEImage/StylyDoc9.PNG)  
+
+【参考リンク】：[PlayMakerを使って近づくと点灯するライトを作る](https://styly.cc/ja/tips/sensorlight_discont_playmaker/)
