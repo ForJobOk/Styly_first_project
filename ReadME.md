@@ -34,6 +34,8 @@ PCの前にHMDが置いてある。PCには会議への招待ダイアログが�
 HMDを被る(頭に接触させる)と別の空間にワープする。
 移動先は会議室。そこでは同僚や部下、上司がアバターで参加しており、仕事の打ち合わせを行う。その空間内には時間の概念があり、会議の終了時間になると自動的にワープで自宅に転送される。  
 
+[シーケンス](ReadME_PDF\Sequences.pdf)
+
 **【必要な素材】**
 - 簡素な自宅の部屋
 - HMDの3Dモデル
@@ -125,7 +127,8 @@ Editor上で行ったWebGLの設定がWebPlayer上では反映されていなか
 ---
 
 ### カメラにUIを追従させたい
-目的はフェードインアウトをUIで実装すること。その手段としてUIをカメラの目の前に追従させたかった。  
+目的はフェードインアウトを実装すること。その手段としてUIをカメラの目の前に追従させたかった。  
+(意外とStyly上でのフェードインアウトの記事が見当たらなくて、自分のやろうとしていることを疑った)
 
 HierarchyでMainCameraの配下にWorldCanvasを置けば良いと思ったが、  
 STYLY_Player(Clone)が動的に生成され、配下にカメラがついて回る仕組みだったのでPlayMakerで実装した。
@@ -136,3 +139,28 @@ STYLY_Player(Clone)が動的に生成され、配下にカメラがついて回�
 
 ![StylyDoc5](ReadMEImage\StylyDoc5.PNG)  
 
+~~Editor上でもシミュレートしたかったので、シーン上通常のカメラはタグを外し、  
+Playerのカメラをタグで検索するようにした。~~  
+→既存のMainCameraはPlay時に[自動でオフ](https://styly.cc/ja/manual/styly_important_point/)になっていた。
+![StylyDoc6](ReadMEImage\StylyDoc6.gif)  
+
+~~アップロード時のシーンのスクショが真っ黒になったのでたぶん正攻法じゃない。  
+ただ、そこはあまり問題にならないのでOK。~~  
+
+ここまでのカメラの子にUIを追加する手法は次のシーンへ子オブジェクトが持ち越される？ことを懸念してか、[非推奨](https://document.styly.cc/doc/docs/en/creator/playmaker/creator_playmaker_player_position/)らしい。  
+
+~~最終的にカメラのポジションとローテーションを追従する仕組みをPlayMakerで作った。~~  
+![StylyDoc7](ReadMEImage\StylyDoc7.PNG)  
+
+Camera Fade InというActionが用意されていた。Outもある。
+
+
+---
+### Player(Camera)との当たり判定
+実行時のカメラにColliderがついていない、つける機能は用意されてない(たぶん)。なので、思いついたのは下記。  
+
+・カメラとの距離で当たり判定っぽくする  
+・動的にColliderをつける  
+・Collider付きオブジェクトをカメラに追従させる  
+
+Colliderは事故が多そうなので距離にした。  
