@@ -96,27 +96,27 @@ private void MovePosition()
 ■解決策  
 親に一つ空のオブジェクトを用意。親にIsTriggerにチェックを入れたColliderを用意し、掴むようにした。Blenderで回転いじっても良いが、面倒だったのでこれで対応。  
 
-![StylyDoc1](ReadMEImage\StylyDoc1.gif)
+![StylyDoc1](ReadMEImage/StylyDoc1.gif)
 
 Colliderが2つあるから？なのか稀に右クリックでのオブジェクトのリリースが反応しないことがあった。  
 
 親の原点から子の3Dモデルの原点を少しずらして、右端を持つようにした。  
 左利き対応はたぶんできないだろうと諦めた。
-![StylyDoc2](ReadMEImage\StylyDoc2.gif)
+![StylyDoc2](ReadMEImage/StylyDoc2.gif)
 
 ---
 
 ### Playerの原点
 **Q.Playerの原点のZ座標が-5なのは何故か？**
 Editor上でMainCameraの位置を-5にしておくとゲームビュー及びシーンビューが実機転送時・PlayMode時と同様の位置関係になった。  
-![StylyDoc3](ReadMEImage\StylyDoc3.PNG)
+![StylyDoc3](ReadMEImage/StylyDoc3.PNG)
 
 ---
 
 ### 影の品質
 影の品質がプラットフォームごとにデフォルトで異なっていたので  
 WebGLのPlayerと実機での品質の違いにアップロード＆実機でプレビューして気付いた。  
-![StylyDoc4](ReadMEImage\StylyDoc4.PNG)
+![StylyDoc4](ReadMEImage/StylyDoc4.PNG)
 
 Editor上で行ったWebGLの設定がWebPlayer上では反映されていなかった。  
 **Q.WebのPlayerに影の設定を反映させるには？**
@@ -137,12 +137,12 @@ STYLY_Player(Clone)が動的に生成され、配下にカメラがついて回�
 
 【参考リンク】：[[Unity/Playmaker]ユーザーに追従するUIの実装方法](https://styly.cc/ja/tips/playmaker_following_ui/)
 
-![StylyDoc5](ReadMEImage\StylyDoc5.PNG)  
+![StylyDoc5](ReadMEImage/StylyDoc5.PNG)  
 
 ~~Editor上でもシミュレートしたかったので、シーン上通常のカメラはタグを外し、  
 Playerのカメラをタグで検索するようにした。~~  
 →既存のMainCameraはPlay時に[自動でオフ](https://styly.cc/ja/manual/styly_important_point/)になっていた。
-![StylyDoc6](ReadMEImage\StylyDoc6.gif)  
+![StylyDoc6](ReadMEImage/StylyDoc6.gif)  
 
 ~~アップロード時のシーンのスクショが真っ黒になったのでたぶん正攻法じゃない。  
 ただ、そこはあまり問題にならないのでOK。~~  
@@ -150,7 +150,7 @@ Playerのカメラをタグで検索するようにした。~~
 ここまでのカメラの子にUIを追加する手法は次のシーンへ子オブジェクトが持ち越される？ことを懸念してか、[非推奨](https://document.styly.cc/doc/docs/en/creator/playmaker/creator_playmaker_player_position/)らしい。  
 
 ~~最終的にカメラのポジションとローテーションを追従する仕組みをPlayMakerで作った。~~  
-![StylyDoc7](ReadMEImage\StylyDoc7.PNG)  
+![StylyDoc7](ReadMEImage/StylyDoc7.PNG)  
 
 Camera Fade InというActionが用意されていた。Outもある。
 
