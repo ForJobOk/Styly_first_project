@@ -162,6 +162,14 @@ Camera Fade InというActionが用意されていた。Outもある。
 
 【参考リンク】：[Camera Fade Out](https://hutonggames.fogbugz.com/default.asp?W186)
 
+ここまでやって実機で確認すると動かなかった。  
+調べたら同じ状況に対するQA発見。  
+【参考リンク】：[ Topic: Camera Fade Out / Fade In works but not in VR (Vive) Help!](https://hutonggames.com/playmakerforum/index.php?topic=14348.0)
+
+なので、結局最初の実装に戻した。  
+Animator付きGameObjectのIsTrigger変更するだけのFadeInOutならそれぞれの機能が独立するし、  
+Prefab化して置いとくだけで嬉しいかなと思った。(FadeInOutそんなに需要ない？)  
+
 ---
 ### Player(Camera)との当たり判定
 実行時のカメラにColliderがついていない、つける機能は用意されてない(たぶん)。なので、思いついたのは下記。  
@@ -175,3 +183,19 @@ Colliderは事故が多そうなので距離にした。
 ![StylyDoc9](ReadMEImage/StylyDoc9.PNG)  
 
 【参考リンク】：[PlayMakerを使って近づくと点灯するライトを作る](https://styly.cc/ja/tips/sensorlight_discont_playmaker/)
+
+---
+### コンポーネントのオンオフ
+`STYLY_Attr_Equipment`を任意のタイミングでオンオフ制御したかった。  
+GetComponentすればいけるだろうと思い、調べたらObject型の変数を定義すれば取得できた。  
+【参考リンク】：[Get Component](https://hutonggames.fogbugz.com/default.asp?W820)
+
+最終的に、`Enable Behaviour`というActionを発見し、それがあれば変数すら必要なかった。
+
+【参考リンク】：[Enable Behaviour](https://hutonggames.fogbugz.com/default.asp?W54)
+
+### 音の減衰
+場面転換で音がプツっと切れるのを避けたかったので探したら`Tween Audio`があった。  
+
+ドキュメントには`Tween Fade`としてまとめられている。  
+【参考リンク】：[Tween Fade](https://hutonggames.fogbugz.com/default.asp?W1717)
