@@ -128,6 +128,16 @@ Editor上で行ったWebGLの設定がWebPlayer上では反映されていなか
 
 ---
 
+### Lightingが実機とEditorで異なる
+
+>STYLYの仕様上、Point Lightの「Render Mode」を「Important」に設定しないとライトが機能しない
+
+【引用元】：[【Unity】グローバルイルミネーション（GI）基礎知識～STYLYへの反映方法](https://styly.cc/ja/tips/gi-room_yosh_gi/)
+
+けっこうハマった。Preview前、Upload前にLightコンポーネントの設定を自動で変更してくれたら便利だと思った。
+
+---
+
 ### カメラにUIを追従させたい
 目的はフェードインアウトを実装すること。その手段としてUIをカメラの目の前に追従させたかった。  
 (意外とStyly上でのフェードインアウトの記事が見当たらなくて、自分のやろうとしていることを疑った)
