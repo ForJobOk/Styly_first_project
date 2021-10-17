@@ -146,7 +146,7 @@ Material:
     - _EmissionParallaxDepth: 0
     - _EmissionParallaxDepthMaskInvert: 0
     - _GlossBlend: 0.485
-    - _GlossMapScale: 0.586
+    - _GlossMapScale: 0.708
     - _GlossPower: 0
     - _Glossiness: 0
     - _GlossyReflections: 1
@@ -223,7 +223,7 @@ Material:
     - _VertexColorBlendEmissive: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionParallaxColor: {r: 1, g: 1, b: 1, a: 1}
     - _GlossColor: {r: 1, g: 1, b: 1, a: 1}
