@@ -2681,8 +2681,8 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0.35
-        - useVariable: 1
-          name: HMD_Camera_Distance
+        - useVariable: 0
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -3316,7 +3316,7 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: {fileID: 1986773541}
-        - useVariable: 1
+        - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
