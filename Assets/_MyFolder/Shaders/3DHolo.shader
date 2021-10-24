@@ -1,7 +1,7 @@
 ﻿// Unity built-in shader source. Copyright (c) 2016 Unity Technologies. MIT license (see license.txt)
 // Edited by MinionsArt for hologram effect
 
-Shader "Custom/Holo"
+Shader "Custom/3DHolo"
 {
     Properties
     {
