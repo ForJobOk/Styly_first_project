@@ -52,7 +52,7 @@ HMDを被る(頭に接触させる)と別の空間にワープする。
 [Notebook PC（PBS）](https://assetstore.unity.com/packages/3d/props/electronics/notebook-pc-pbs-133020)  
 [YGS TV](https://assetstore.unity.com/packages/3d/props/electronics/ygs-tv-96583)  
 [Modern Desk](https://assetstore.unity.com/packages/3d/props/interior/modern-desk-155462#description)  
-[City Street Skyboxes Vol. 1](https://assetstore.unity.com/packages/2d/textures-materials/sky/city-street-skyboxes-vol-1-157401)
+[City Street Skyboxes Vol. 1](https://assetstore.unity.com/packages/2d/textures-materials/sky/city-street-skyboxes-vol-1-157401)  
 
 
 ---
@@ -210,3 +210,7 @@ GetComponentすればいけるだろうと思い、調べたらObject型の変�
 
 ドキュメントには`Tween Fade`としてまとめられている。  
 【参考リンク】：[Tween Fade](https://hutonggames.fogbugz.com/default.asp?W1717)
+
+---
+### 容量との闘い
+やりたいことを広げすぎて200MBにおさまらない気配が出てきた。
