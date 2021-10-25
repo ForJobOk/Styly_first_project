@@ -100,12 +100,12 @@ private void MovePosition()
 
 ![StylyDoc1](ReadMEImage/StylyDoc1.gif)
 
-Colliderが2つあるから？なのか稀に右クリックでのオブジェクトのリリースが反応しないことがあった。  
+~~Colliderが2つあるから？なのか稀に右クリックでのオブジェクトのリリースが反応しないことがあった。~~  
+→カメラの前に透過Canvasを追従させておりそのオブジェクトがBlocksRaycastsしていた。
 
 親の原点から子の3Dモデルの原点を少しずらして、右端を持つようにした。  
 左利き対応はたぶんできないだろうと諦めた。
 ![StylyDoc2](ReadMEImage/StylyDoc2.gif)
-
 
 ---
 
@@ -205,6 +205,24 @@ GetComponentすればいけるだろうと思い、調べたらObject型の変�
 
 【参考リンク】：[Enable Behaviour](https://hutonggames.fogbugz.com/default.asp?W54)
 
+---
+### 任意のタイミングでオブジェクトを装備可能にしたい
+`STYLY_Attr_Equipment`をオフにしても、Destroyしても掴む機能がオフにならなかった。  
+動的に機能の中身を生成しているため？  
+
+任意のタイミングでAddComponentして対応できるか検証したが、エラーを吐いた。  
+
+>NullReferenceException: Object reference not set to an instance of an object
+STYLY.Interaction.SDK.Dummy.DummyEquipment.Equip () (at Assets/STYLY_Plugin/STYLY_InteractionSDK/Simulator/DummyImpls/DummyEquipment.cs:114)
+STYLY.Interaction.SDK.Dummy.DummyEquipment.OnPointerDown (UnityEngine.EventSystems.PointerEventData eventData) (at Assets/STYLY_Plugin/STYLY_InteractionSDK/Simulator/DummyImpls/DummyEquipment.cs:80)
+UnityEngine.EventSystems.ExecuteEvents.Execute (UnityEngine.EventSystems.IPointerDownHandler handler, UnityEngine.EventSystems.BaseEventData eventData) (at D:/UnityEditorFolder/2019.3.6f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:36)
+UnityEngine.EventSystems.ExecuteEvents.Execute[T] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.ExecuteEvents+EventFunction`1[T1] functor) (at D:/UnityEditorFolder/2019.3.6f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:261)
+UnityEngine.EventSystems.EventSystem:Update() (at D:/UnityEditorFolder/2019.3.6f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:377)
+
+今回は諦めた。
+
+---
+
 ### 音の減衰
 場面転換で音がプツっと切れるのを避けたかったので探したら`Tween Audio`があった。  
 
@@ -213,4 +231,15 @@ GetComponentすればいけるだろうと思い、調べたらObject型の変�
 
 ---
 ### 容量との闘い
-やりたいことを広げすぎて200MBにおさまらない気配が出てきた。
+1つのSceneにやりたいことを広げすぎて200MBにおさまらない気配が出てきた。
+
+---
+### 音源のループ
+音源をループさせて再生させる際にAudioPlayというActionを使うと単発再生になってしまっていた。  
+
+下記のようにする必要があった。それかLoopにチェックを入れたAudioSourse付きゲームオブジェクトを任意のタイミングでアクティブにするなど。
+
+![StylyDoc10](ReadMEImage/StylyDoc10.PNG)   
+
+【参考リンク】：[Topic: Looping a Oneshot sound  (Read 4422 times)](https://hutonggames.com/playmakerforum/index.php?topic=5428.0)
+
