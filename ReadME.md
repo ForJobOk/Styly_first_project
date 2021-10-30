@@ -53,6 +53,8 @@ HMDを被る(頭に接触させる)と別の空間にワープする。
 [YGS TV](https://assetstore.unity.com/packages/3d/props/electronics/ygs-tv-96583)  
 [Modern Desk](https://assetstore.unity.com/packages/3d/props/interior/modern-desk-155462#description)  
 [City Street Skyboxes Vol. 1](https://assetstore.unity.com/packages/2d/textures-materials/sky/city-street-skyboxes-vol-1-157401)  
+[Skybox Series Free](https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633?locale=ja-JP)  
+[Hyper-Casual Character Stickman sphere head](https://assetstore.unity.com/packages/3d/characters/humanoids/hyper-casual-character-stickman-sphere-head-161922?locale=ja-JP)  
 
 
 ---
@@ -178,8 +180,7 @@ Camera Fade InというActionが用意されていた。Outもある。
 【参考リンク】：[ Topic: Camera Fade Out / Fade In works but not in VR (Vive) Help!](https://hutonggames.com/playmakerforum/index.php?topic=14348.0)
 
 なので、結局最初の実装に戻した。  
-Animator付きGameObjectのIsTrigger変更するだけのFadeInOutならそれぞれの機能が独立するし、  
-Prefab化して置いとくだけで嬉しいかなと思った。(FadeInOutそんなに需要ない？)  
+NearClipの限界すれすれまでImageを近づけてそれっぽくした。
 
 ---
 ### Player(Camera)との当たり判定
@@ -231,15 +232,48 @@ UnityEngine.EventSystems.EventSystem:Update() (at D:/UnityEditorFolder/2019.3.6f
 
 ---
 ### 容量との闘い
-1つのSceneにやりたいことを広げすぎて200MBにおさまらない気配が出てきた。
+1つのSceneにやりたいことを広げすぎて200MBにおさまらない気配が出てきた。  
+シーン(Prefab)軽量化機能欲しい。一方でリダクションくらい自分でやれ　とも思う。
+
+【参考リンク】：[サイズ容量が大きいアセットを縮小してSTYLYにアップロードする方法](https://styly.cc/ja/tips/filesize-reduction/)
 
 ---
 ### 音源のループ
-音源をループさせて再生させる際にAudioPlayというActionを使うと単発再生になってしまっていた。  
+音源をループさせて再生させる際にAudioPlayというActionの`One Shot Clip`を使うと単発再生になってしまった。  
 
-下記のようにする必要があった。それかLoopにチェックを入れたAudioSourse付きゲームオブジェクトを任意のタイミングでアクティブにするなど。
+下記のようにする必要があった。
+要は`One Shot Clip`を再生音源と勘違いしていた。PlayとPlayOneShotが合体したイメージ。
+
+Loopにチェックを入れたAudioSourse付きゲームオブジェクトを任意のタイミングでアクティブにする、、が妥当な気がする。
 
 ![StylyDoc10](ReadMEImage/StylyDoc10.PNG)   
 
 【参考リンク】：[Topic: Looping a Oneshot sound  (Read 4422 times)](https://hutonggames.com/playmakerforum/index.php?topic=5428.0)
+
+---
+### Material(Shader)の値を操作したい
+下記のような表現をMaterial経由でShaderの値を操作して行いたかった。
+
+![StylyDoc13](ReadMEImage/StylyDoc13.gif)  
+
+まずマテリアルを取得する。
+マテリアルを取得しなくても`Set Material Float`でやりたいことはできるが、  SharedMaterialの選択肢を失う。  
+ちなみに`Set Material Float`はデフォルトでSharedMaterialとして取得する。
+
+![StylyDoc11](ReadMEImage/StylyDoc11.PNG)  
+
+先ほどセットした変数の値を毎フレーム`Set Material Float`することでアニメーションさせた。
+
+![StylyDoc12](ReadMEImage/StylyDoc12.PNG)  
+
+同じマテリアルを持つ複数のオブジェクトに一括で変更加える(SharedMaterialとして利用する)というのが便利だと思った。  
+UnityのAnimationは、とあるオブジェクトの1つのマテリアルをRenderer経由で参照して値を変更しても  
+各マテリアルのInstanceを取得してしまう。  
+PlayMakerしか使えない状況下でSharedMaterialで取得できるのはありがたい。  
+(というかAnimationにSharedMaterialとして参照する方法が欲しい)
+
+
+【参考リンク】：[Topic: How to get Float Interpolate to, well, interpolate a float?](https://hutonggames.com/playmakerforum/index.php?topic=10412.0)
+
+
 
