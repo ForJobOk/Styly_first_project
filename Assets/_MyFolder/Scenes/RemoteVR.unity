@@ -2533,7 +2533,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: WaitCall
+        toState: HMD_Set
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -2652,7 +2652,7 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
-        - 
+        - FINISHED
         byteData: 0000
         arrayParamSizes: 
         arrayParamTypes: []
@@ -2878,79 +2878,6 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 000000000100000002000000000000000100000003000000000000000000000000000000000000000000000001000000010000000200000001000000000000000300000000000000040000000200000002000000030000000500000006000000
         paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000010000000100000000000000000000000100000000000000010000000000000000000000000000000100000001000000
-    - name: WaitCall
-      description: "n\u79D2\u5F85\u3064"
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 214.75781
-        y: 260.03906
-        width: 100
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: HMD_Set
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.Wait
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 48c01101
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 2
-        fsmIntParams: []
-        fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - FINISHED
-        byteData: 00
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 0f0000001700000001000000
-        paramName:
-        - time
-        - finishEvent
-        - realTime
-        paramDataPos: 000000000000000000000000
-        paramByteDataSize: 000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -8675,7 +8602,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 463.96875
+        x: 271.96875
         y: 366.20312
         width: 167.6
         height: 32
@@ -8801,7 +8728,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 573.75
+        x: 381.75
         y: 460.20312
         width: 100
         height: 32
@@ -8892,7 +8819,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 666.8125
+        x: 474.8125
         y: 654.7344
         width: 231.6
         height: 32
@@ -9061,7 +8988,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 800.5078
+        x: 608.5078
         y: 766.09375
         width: 100
         height: 16
@@ -9131,7 +9058,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 608.5547
+        x: 416.5547
         y: 547.5781
         width: 163.6
         height: 32
@@ -9289,7 +9216,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 338.27344
+        x: 146.27344
         y: 198.82031
         width: 123.6
         height: 32
@@ -9301,7 +9228,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: WaitCall
+        toState: HMD_Set
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -9424,14 +9351,14 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 1
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
-        - 
+        - FINISHED
         byteData: 000000000000
         arrayParamSizes: 
         arrayParamTypes: []
@@ -9466,7 +9393,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 248.75781
+        x: 56.757812
         y: 101.0625
         width: 115.6
         height: 32
@@ -9629,8 +9556,8 @@ MonoBehaviour:
         fsmPropertyParams: []
         layoutOptionParams: []
         fsmStringParams:
-        - useVariable: 1
-          name: MoveFactor
+        - useVariable: 0
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -9915,79 +9842,6 @@ MonoBehaviour:
         - realTime
         paramDataPos: 0000000001000000020000000000000001000000030000000000000000000000010000000000000001000000010000000200000003000000020000000300000002000000040000000500000004000000050000000300000006000000070000000600000007000000040000000000000008000000050000000000000009000000000000000a0000000600000000000000000000000b0000000700000000000000010000000c00000008000000010000000200000001000000010000000d000000020000000e000000030000001200000004000000050000000000000000000000060000000800000016000000000000001a0000001e0000001f000000070000000100000023000000
         paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000010000000100000000000000000000000000000001000000010000000000000000000000000000000100000001000000000000000000000000000000010000000100000000000000000000000100000000000000000000000100000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000000000000000000001000000000000000400000000000000040000000000000000000000000000000000000000000000000000000400000000000000040000000100000004000000000000000000000001000000
-    - name: WaitCall
-      description: "n\u79D2\u5F85\u3064"
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 426.85938
-        y: 278.8047
-        width: 100
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: HMD_Set
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.Wait
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 48c01101
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 2
-        fsmIntParams: []
-        fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - FINISHED
-        byteData: 00
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 0f0000001700000001000000
-        paramName:
-        - time
-        - finishEvent
-        - realTime
-        paramDataPos: 000000000000000000000000
-        paramByteDataSize: 000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -17155,7 +17009,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: WaitCall
+        toState: HMD_Set
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -17234,14 +17088,14 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 1
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
-        - 
+        - FINISHED
         byteData: 0000
         arrayParamSizes: 
         arrayParamTypes: []
@@ -17444,79 +17298,6 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 0000000001000000020000000000000001000000030000000000000000000000000000000000000000000000010000000100000001000000020000000200000000000000010000000300000004000000
         paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000010000000000000000000000010000000000000000000000010000000000000000000000000000000100000001000000
-    - name: WaitCall
-      description: "n\u79D2\u5F85\u3064"
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 216
-        y: 250.75781
-        width: 100
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: HMD_Set
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.Wait
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 48c01101
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 2
-        fsmIntParams: []
-        fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - FINISHED
-        byteData: 00
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 0f0000001700000001000000
-        paramName:
-        - time
-        - finishEvent
-        - realTime
-        paramDataPos: 000000000000000000000000
-        paramByteDataSize: 000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -22646,19 +22427,17 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.Wait
         - HutongGames.PlayMaker.Actions.ActivateGameObject
-        - HutongGames.PlayMaker.Actions.GetFsmVariable
-        - HutongGames.PlayMaker.Actions.GetFsmVariable
+        - HutongGames.PlayMaker.Actions.GetMaterial
         - HutongGames.PlayMaker.Actions.SetFloatValue
         customNames:
         - 
         - 
         - 
         - 
-        - 
-        actionEnabled: 0101010101
-        actionIsOpen: 0101010101
-        actionStartIndex: 0000000003000000080000000c00000010000000
-        actionHashCodes: 48c01101b2cf10002910c8022910c8029845b305
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 0000000003000000080000000c000000
+        actionHashCodes: 48c01101b2cf1000fbfad8059845b305
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -22677,84 +22456,23 @@ MonoBehaviour:
             tooltip: 
             showInInspector: 0
             networkSync: 0
-            value: {fileID: 670296349}
-        - ownerOption: 1
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 670296349}
+            value: {fileID: 301283189}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams:
+        fsmStringParams: []
+        fsmObjectParams:
         - useVariable: 1
           name: Geometry
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 
-        - useVariable: 1
-          name: MoveFactor
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 
-        fsmObjectParams: []
-        fsmVarParams:
-        - variableName: Geometry
-          objectType: UnityEngine.Material
-          useVariable: 1
-          type: 9
-          floatValue: 0
-          intValue: 0
-          boolValue: 0
-          stringValue: 
-          vector4Value: {x: 0, y: 0, z: 0, w: 0}
-          objectReference: {fileID: 0}
-          arrayValue:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            type: -1
-            objectTypeName: 
-            floatValues: []
-            intValues: 
-            boolValues: 
-            stringValues: []
-            vector4Values: []
-            objectReferences: []
-        - variableName: MoveFactor
-          objectType: UnityEngine.Object
-          useVariable: 1
-          type: 0
-          floatValue: 0
-          intValue: 0
-          boolValue: 0
-          stringValue: 
-          vector4Value: {x: 0, y: 0, z: 0, w: 0}
-          objectReference: {fileID: 0}
-          arrayValue:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            type: -1
-            objectTypeName: 
-            floatValues: []
-            intValues: 
-            boolValues: 
-            stringValues: []
-            vector4Values: []
-            objectReferences: []
+          typeName: UnityEngine.Material
+          value: {fileID: 0}
+        fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams:
@@ -22776,7 +22494,13 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        fsmIntParams: []
+        fsmIntParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmBoolParams:
         - useVariable: 0
           name: 
@@ -22797,12 +22521,12 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - FINISHED
-        byteData: 000000000000
+        byteData: 0000000100
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0f0000001700000001000000140000001100000011000000010000000100000014000000120000002700000001000000140000001200000027000000010000000f0000000f00000001000000
+        paramDataType: 0f00000017000000010000001400000011000000110000000100000001000000140000001000000020000000010000000f0000000f00000001000000
         paramName:
         - time
         - finishEvent
@@ -22813,18 +22537,14 @@ MonoBehaviour:
         - resetOnExit
         - everyFrame
         - gameObject
-        - fsmName
-        - storeValue
-        - everyFrame
-        - gameObject
-        - fsmName
-        - storeValue
-        - everyFrame
+        - materialIndex
+        - material
+        - getSharedMaterial
         - floatVariable
         - floatValue
         - everyFrame
-        paramDataPos: 00000000000000000000000000000000000000000100000001000000020000000100000000000000000000000300000002000000010000000100000004000000010000000200000005000000
-        paramByteDataSize: 00000000000000000100000000000000000000000000000001000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000001000000
+        paramDataPos: 000000000000000000000000000000000000000001000000010000000200000001000000000000000000000003000000010000000200000004000000
+        paramByteDataSize: 000000000000000001000000000000000000000000000000010000000100000000000000000000000000000001000000000000000000000001000000
     - name: InitializeStart
       description: 
       colorIndex: 0
@@ -31978,7 +31698,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: WaitCall
+        toState: HMD_Set
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -32057,14 +31777,14 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 1
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
-        - 
+        - FINISHED
         byteData: 0000
         arrayParamSizes: 
         arrayParamTypes: []
@@ -32278,79 +31998,6 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000010000000200000000000000010000000300000000000000000000000000000000000000000000000100000000000000020000000100000001000000030000000200000000000000010000000400000005000000
         paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000100000000000000000000000100000000000000010000000000000000000000010000000000000000000000000000000100000001000000
-    - name: WaitCall
-      description: "n\u79D2\u5F85\u3064"
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 225.46094
-        y: 255.55469
-        width: 100
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: HMD_Set
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.Wait
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 48c01101
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 2
-        fsmIntParams: []
-        fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - FINISHED
-        byteData: 00
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 0f0000001700000001000000
-        paramName:
-        - time
-        - finishEvent
-        - realTime
-        paramDataPos: 000000000000000000000000
-        paramByteDataSize: 000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
