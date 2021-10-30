@@ -4,7 +4,6 @@
     {
         [HDR]_MainColor("MainColor",Color) =(0,0,0,0)
         _MoveFactor ("Move Factor", Range(0,1.0)) = 0.5
-        _ScaleFactor ("Scale Factor", Range(0,1.0)) = 0.5
     }
     SubShader
     {
@@ -26,7 +25,6 @@
             #include "UnityCG.cginc"
 
             float _MoveFactor;
-            float _ScaleFactor;
             float4 _MainColor;
 
             struct appdata
@@ -93,8 +91,8 @@
                     g2f o;
 
                     //こっちの方がすっきり　順番を変えただけ
-                    v.vertex.xyz = center + (v.vertex.xyz - center) * (1.0 - _MoveFactor - _ScaleFactor);
-                    v.vertex.xyz += normal * _MoveFactor * abs(r3);
+                    v.vertex.xyz = center + (v.vertex.xyz - center) * _MoveFactor;
+                    v.vertex.xyz += normal * (1.0-_MoveFactor) * abs(r3);
                     
                     
                     o.vertex = UnityObjectToClipPos(v.vertex);
