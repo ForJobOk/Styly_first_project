@@ -233,7 +233,7 @@ UnityEngine.EventSystems.EventSystem:Update() (at D:/UnityEditorFolder/2019.3.6f
 ---
 ### 容量との闘い
 1つのSceneにやりたいことを広げすぎて200MBにおさまらない気配が出てきた。  
-シーン(Prefab)軽量化機能欲しい。一方でリダクションくらい自分でやれ　とも思う。
+~~シーン(Prefab)軽量化機能欲しい。一方で自分でやれ　とも思う。~~
 
 【参考リンク】：[サイズ容量が大きいアセットを縮小してSTYLYにアップロードする方法](https://styly.cc/ja/tips/filesize-reduction/)
 
@@ -275,5 +275,8 @@ PlayMakerしか使えない状況下でSharedMaterialで取得できるのはあ
 
 【参考リンク】：[Topic: How to get Float Interpolate to, well, interpolate a float?](https://hutonggames.com/playmakerforum/index.php?topic=10412.0)
 
+ここまでEditor上の話で実機(SteamVR版)で確認するとSharedMaterialとして利用できていなかった。挙動を簡単に書くと下記。  
 
+理想：複数あるオブジェクト全てのMaterialの見た目が変わる。  
+現実：複数あるオブジェクトの中から一つのオブジェクトのMaterialの見た目だけ変わる。
 
