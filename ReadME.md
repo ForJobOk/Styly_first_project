@@ -269,7 +269,7 @@ Loopにチェックを入れたAudioSourse付きゲームオブジェクトを�
 
 まずMaterialを取得する。
 Materialを取得しなくても`Set Material Float`でやりたいことはできるが、SharedMaterialの選択肢を失う。  
-ちなみに`Set Material Float`はデフォルトとして選択したMaterialのInstanceを取得する。  
+`Set Material Float`はデフォルトとして選択したMaterialのInstanceを取得する。  
 下記がMaterial取得と設定の一連の流れ。  
 
 ![StylyDoc11](ReadMEImage/StylyDoc11.PNG)  
