@@ -47,15 +47,21 @@ HMDを被る(頭に接触させる)と別の空間にワープする。
 ■候補  
 [Simple Office](https://assetstore.unity.com/packages/3d/props/interior/simple-office-28730?locale=ja-JP)  
 [Home Furniture Pack](https://assetstore.unity.com/packages/3d/props/furniture/home-furniture-pack-137357)  
-[HQ ArchViz Conference Room](https://assetstore.unity.com/packages/3d/environments/hq-archviz-conference-room-127663)  
-[Modern Interier Room Pack Vol.1](https://assetstore.unity.com/packages/3d/environments/modern-interier-room-pack-vol-1-77021)  
-[Notebook PC（PBS）](https://assetstore.unity.com/packages/3d/props/electronics/notebook-pc-pbs-133020)  
+[HQ ArchViz Conference Room](https://assetstore.unity.com/packages/3d/environments/hq-archviz-conference-room-127663)　使用  
+[Modern Interier Room Pack Vol.1](https://assetstore.unity.com/packages/3d/environments/modern-interier-room-pack-vol-1-77021) 使用  
+[Notebook PC（PBS）](https://assetstore.unity.com/packages/3d/props/electronics/notebook-pc-pbs-133020) 使用  
 [YGS TV](https://assetstore.unity.com/packages/3d/props/electronics/ygs-tv-96583)  
 [Modern Desk](https://assetstore.unity.com/packages/3d/props/interior/modern-desk-155462#description)  
-[City Street Skyboxes Vol. 1](https://assetstore.unity.com/packages/2d/textures-materials/sky/city-street-skyboxes-vol-1-157401)  
-[Skybox Series Free](https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633?locale=ja-JP)  
-[Hyper-Casual Character Stickman sphere head](https://assetstore.unity.com/packages/3d/characters/humanoids/hyper-casual-character-stickman-sphere-head-161922?locale=ja-JP)  
+[City Street Skyboxes Vol. 1](https://assetstore.unity.com/packages/2d/textures-materials/sky/city-street-skyboxes-vol-1-157401) 使用  
+[Skybox Series Free](https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633?locale=ja-JP) 使用  
+[Hyper-Casual Character Stickman sphere head](https://assetstore.unity.com/packages/3d/characters/humanoids/hyper-casual-character-stickman-sphere-head-161922?locale=ja-JP) 使用  
 
+---
+## 実際にできたもの
+
+[Remote Work](https://gallery.styly.cc/scene/21577dc6-2acf-43a9-84ef-a870ec11b551)  
+
+>You are invited to a meeting. Let's join a VR workspace. Please note where you are now.
 
 ---
 
@@ -70,7 +76,7 @@ HMDを被る(頭に接触させる)と別の空間にワープする。
 
 ## 詰まったところ、疑問点など
 
-
+---
 ### Editor上からVRでの見え方を確認したい  
 
 下記で解決。  
@@ -112,21 +118,20 @@ private void MovePosition()
 ---
 
 ### Playerの原点
-**Q.Playerの原点のZ座標が-5なのは何故か？**
 Editor上でMainCameraの位置を-5にしておくとゲームビュー及びシーンビューが実機転送時・PlayMode時と同様の位置関係になった。  
 ![StylyDoc3](ReadMEImage/StylyDoc3.PNG)
 
 ---
 
 ### 影の品質
-影の品質がプラットフォームごとにデフォルトで異なっていたので  
+影の品質がプラットフォームごとにデフォルトの状態で異なっていた？  
 WebGLのPlayerと実機での品質の違いにアップロード＆実機でプレビューして気付いた。  
 ![StylyDoc4](ReadMEImage/StylyDoc4.PNG)
 
-Editor上で行ったWebGLの設定がWebPlayer上では反映されていなかった。  
-**Q.WebのPlayerに影の設定を反映させるには？**
+Editor上で行ったWebGLの設定がWebPlayer上では反映されていなかった。(勘違い？)  
+Web版に影の設定を反映させる方法がわからず。もしかしていじっても意味ない？  
 
-下記のように描画距離を絞って影の品質を上げたい。  
+下記のように描画距離を絞って影の品質を上げたい。特にQuest。  
 【参考リンク】：[2-2 City](https://gallery.styly.cc/scene/074fbc78-39ad-4814-94d1-d681df8d565b)
 
 ---
@@ -137,7 +142,8 @@ Editor上で行ったWebGLの設定がWebPlayer上では反映されていなか
 
 【引用元】：[【Unity】グローバルイルミネーション（GI）基礎知識～STYLYへの反映方法](https://styly.cc/ja/tips/gi-room_yosh_gi/)
 
-けっこうハマった。Preview前、Upload前にLightコンポーネントの設定を自動で変更してくれたら便利だと思った。
+けっこうハマった。Preview前、Upload前にLightコンポーネントの設定を自動で変更してくれたら神だなと思った。  
+ただ、それはそれでBake用にLight置いてる人とかにとっては邪魔な機能かも？
 
 ---
 
@@ -156,7 +162,7 @@ STYLY_Player(Clone)が動的に生成され、配下にカメラがついて回�
 
 ~~Editor上でもシミュレートしたかったので、シーン上通常のカメラはタグを外し、  
 Playerのカメラをタグで検索するようにした。~~  
-→既存のMainCameraはPlay時に[自動でオフ](https://styly.cc/ja/manual/styly_important_point/)になっていた。
+→既存のMainCameraはPlay時に[自動でオフ](https://styly.cc/ja/manual/styly_important_point/)になっていた。  
 ![StylyDoc6](ReadMEImage/StylyDoc6.gif)  
 
 ~~アップロード時のシーンのスクショが真っ黒になったのでたぶん正攻法じゃない。  
@@ -164,8 +170,6 @@ Playerのカメラをタグで検索するようにした。~~
 
 ここまでのカメラの子にUIを追加する手法は次のシーンへ子オブジェクトが持ち越される？ことを懸念してか、[非推奨](https://document.styly.cc/doc/docs/en/creator/playmaker/creator_playmaker_player_position/)らしい。  
 
-~~最終的にカメラのポジションとローテーションを追従する仕組みをPlayMakerで作った。~~  
-![StylyDoc7](ReadMEImage/StylyDoc7.PNG)  
 
 Camera Fade InというActionが用意されていた。Outもある。
 
@@ -175,12 +179,15 @@ Camera Fade InというActionが用意されていた。Outもある。
 
 【参考リンク】：[Camera Fade Out](https://hutonggames.fogbugz.com/default.asp?W186)
 
-ここまでやって実機で確認すると動かなかった。  
+ここまでやって実機で確認すると`Camera Fade`は動かなかった。  
 調べたら同じ状況に対するQA発見。  
 【参考リンク】：[ Topic: Camera Fade Out / Fade In works but not in VR (Vive) Help!](https://hutonggames.com/playmakerforum/index.php?topic=14348.0)
 
-なので、結局最初の実装に戻した。  
-NearClipの限界すれすれまでImageを近づけてそれっぽくした。
+最終的にカメラのポジションとローテーションを追従する仕組みをPlayMakerで作った。  
+![StylyDoc7](ReadMEImage/StylyDoc7.PNG)  
+
+NearClipの限界すれすれまでImageを近づけてそれっぽくした。  
+(どのシーンか忘れたけど)真っ黒な球体の拡縮とその球体のRenderQueueでイイ感じにフェードインアウトする実装とかがあった気がして、それを作れば良かったのかなーとやり終えてから思った。(マガジンに記事ある？)
 
 ---
 ### Player(Camera)との当たり判定
@@ -227,7 +234,7 @@ UnityEngine.EventSystems.EventSystem:Update() (at D:/UnityEditorFolder/2019.3.6f
 ### 音の減衰
 場面転換で音がプツっと切れるのを避けたかったので探したら`Tween Audio`があった。  
 
-ドキュメントには`Tween Fade`としてまとめられている。  
+ドキュメントには`Tween Fade`としてまとめられている。(もしかしてドキュメントあんまり更新されてない？)  
 【参考リンク】：[Tween Fade](https://hutonggames.fogbugz.com/default.asp?W1717)
 
 ---
@@ -256,9 +263,10 @@ Loopにチェックを入れたAudioSourse付きゲームオブジェクトを�
 
 ![StylyDoc13](ReadMEImage/StylyDoc13.gif)  
 
-まずマテリアルを取得する。
-マテリアルを取得しなくても`Set Material Float`でやりたいことはできるが、  SharedMaterialの選択肢を失う。  
-ちなみに`Set Material Float`はデフォルトでSharedMaterialとして取得する。
+まずMaterialを取得する。
+Materialを取得しなくても`Set Material Float`でやりたいことはできるが、SharedMaterialの選択肢を失う。  
+ちなみに`Set Material Float`はデフォルトとして選択したMaterialのInstanceを取得する。  
+下記がMaterial取得と設定の一連の流れ。  
 
 ![StylyDoc11](ReadMEImage/StylyDoc11.PNG)  
 
@@ -266,17 +274,46 @@ Loopにチェックを入れたAudioSourse付きゲームオブジェクトを�
 
 ![StylyDoc12](ReadMEImage/StylyDoc12.PNG)  
 
-同じマテリアルを持つ複数のオブジェクトに一括で変更加える(SharedMaterialとして利用する)というのが便利だと思った。  
-UnityのAnimationは、とあるオブジェクトの1つのマテリアルをRenderer経由で参照して値を変更しても  
-各マテリアルのInstanceを取得してしまう。  
+同じMaterialを持つ複数のオブジェクトに一括で変更加える(SharedMaterialとして利用する)というのが便利だと思った。  
+UnityのAnimationは、とあるオブジェクトの1つのMaterialをRenderer経由で参照して値を変更しても  
+各MaterialのInstanceを取得してしまう。(あるかもだけど検索しても出ない。Script使えば？で終わりの質問)  
 PlayMakerしか使えない状況下でSharedMaterialで取得できるのはありがたい。  
 (というかAnimationにSharedMaterialとして参照する方法が欲しい)
 
 
 【参考リンク】：[Topic: How to get Float Interpolate to, well, interpolate a float?](https://hutonggames.com/playmakerforum/index.php?topic=10412.0)
 
-ここまでEditor上の話で実機(SteamVR版)で確認するとSharedMaterialとして利用できていなかった。挙動を簡単に書くと下記。  
+ここまでEditor上の話で実機(SteamVR、WebPlayer)で確認するとSharedMaterialとして利用できていなかった。  
+挙動を簡単に書くと下記。  
 
-理想：複数あるオブジェクト全てのMaterialの見た目が変わる。  
-現実：複数あるオブジェクトの中から一つのオブジェクトのMaterialの見た目だけ変わる。
+**理想：複数あるオブジェクト全てのMaterialの見た目が変わる。**  
 
+![StylyDoc15](ReadMEImage/StylyDoc15.gif)  
+**実際の挙動：複数あるオブジェクトの中から一つのオブジェクトのMaterialの見た目だけ変わる。**
+
+![StylyDoc16](ReadMEImage/StylyDoc16.gif)  
+
+最終的にGetChildNextなどを駆使して特定のオブジェクト配下のオブジェクトを全て取得し、それぞれに処理を与える実装に変更した。  
+
+【参考リンク】：[Topic: Get Next Child](https://hutonggames.com/playmakerforum/index.php?topic=1057.0)
+
+それでも叶えられない挙動があった。全てのオブジェクトを一斉にTween指せるという挙動が実現できなかった。  
+
+下記のLoopのState内でTweenを呼んだが、1つのTweenが終わるまで待つという直列な実行になってしまい、それぞれに対して並列で実行することができなかったので諦めた。
+![StylyDoc14](ReadMEImage/StylyDoc14.PNG)  
+
+配列を作るAction等も同様に試したが、結局取り出す際にTweenに渡す変数が1ずつのため、望んだ結果にはならなかった。(何かしら見落としている可能性有り)  
+
+見落としている解決策があるかもしれないが、ほしいと思ったのは下記2つ。  
+**・Tweenを複数のオブジェクトに一斉にかける機能  
+・特定のオブジェクトのMaterial、ではなくMaterialそのものの設定をShader経由で変更する機能(Shared Material的な動き)**  
+
+---
+### ActionがWeb上で編集中に呼ばれてしまう
+開始時、PlayMakerのStartからすぐ繋いだState内でCreate Objectを呼んでいる場合、Webの編集画面上でゲームオブジェクトが生成されてしまっていた。  
+
+その状態でシーンをPublishして確認したところ、既にオブジェクトが生成された状態でPublishされたことが影響して2つのオブジェクトが生成されていた。
+
+Materialの色変更なども同様で、編集中に呼ばれることが望まない挙動に繋がる場面があった。
+
+この現象はWeb版でのみ再現できた。  
