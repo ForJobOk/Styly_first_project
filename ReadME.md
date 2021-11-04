@@ -63,6 +63,10 @@ HMDを被る(頭に接触させる)と別の空間にワープする。
 
 >You are invited to a meeting. Let's join a VR workspace. Please note where you are now.
 
+FSMごとにシナリオを定義し、1つのシナリオが終わり次第、次のシナリオのFSMを持つオブジェクトをオンにする手法で実装した。  
+
+![StylyDoc17](ReadMEImage/StylyDoc17.PNG)
+
 ---
 
 ## 参考リンク
