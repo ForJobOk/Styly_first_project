@@ -301,7 +301,7 @@ PlayMakerしか使えない状況下でSharedMaterialで取得できるのはあ
 
 【参考リンク】：[Topic: Get Next Child](https://hutonggames.com/playmakerforum/index.php?topic=1057.0)
 
-それでも叶えられない挙動があった。全てのオブジェクトを一斉にTween指せるという挙動が実現できなかった。  
+それでも叶えられない挙動があった。全てのオブジェクトを一斉にTweenさせるという挙動が実現できなかった。  
 
 下記のLoopのState内でTweenを呼んだが、1つのTweenが終わるまで待つという直列な実行になってしまい、それぞれに対して並列で実行することができなかったので諦めた。
 ![StylyDoc14](ReadMEImage/StylyDoc14.PNG)  
